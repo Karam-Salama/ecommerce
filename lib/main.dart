@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'core/routes/app_router.dart';
+
+
 void main() {
   runApp(const EcommerceApp());
 }
@@ -9,6 +12,10 @@ class EcommerceApp extends StatelessWidget {
 
   @override 
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      routerConfig: router,
+    );
   }
 }
+
