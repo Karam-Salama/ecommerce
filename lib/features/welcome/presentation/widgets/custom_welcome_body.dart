@@ -8,18 +8,13 @@ class CustomWelcomeBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Expanded(
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            WelcomeTitle(),
-            SizedBox(height: 8),
-            WelcomeSubtitle(),
-          ],
-        ),
-      ),
+    return const Column(
+      children: [
+        SizedBox(height: 315),
+        WelcomeTitle(),
+        SizedBox(height: 8),
+        WelcomeSubtitle(),
+      ],
     );
   }
 }

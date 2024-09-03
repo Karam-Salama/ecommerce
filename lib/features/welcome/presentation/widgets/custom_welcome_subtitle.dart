@@ -12,6 +12,8 @@ class WelcomeSubtitle extends StatelessWidget {
       AppStrings.welcomeSubTitle,
       style: CustomTextStyles.lato16style,
       textAlign: TextAlign.center,
+      maxLines: 2,
+      overflow: TextOverflow.ellipsis,
     );
   }
 }
