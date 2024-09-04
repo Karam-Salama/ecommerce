@@ -1,7 +1,8 @@
+import 'package:ecommerce_app/core/database/cache/cache_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import '../../../../core/functions/navigation.dart';
+import '../../../../core/service/service_locator.dart';
 import '../../../../core/utils/app_assets.dart';
 
 class SplashView extends StatefulWidget {
@@ -14,11 +15,14 @@ class SplashView extends StatefulWidget {
 class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
+    bool welcomeVisited =
+        getIt<CacheHelper>().getData(key: "welcomeVisited") ?? false;
+    if (welcomeVisited) {
+      delayedNavigate(context, "/login");
+    } else {
+      delayedNavigate(context, "/welcome");
+    }
     super.initState();
-    // Add a post-frame callback to navigate after the widget is built
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      delayedNavigate(context, mounted);
-    });
   }
 
   @override
@@ -40,10 +44,8 @@ class _SplashViewState extends State<SplashView> {
   }
 }
 
-void delayedNavigate(context, mounted) {
+void delayedNavigate(context, path) {
   Future.delayed(const Duration(seconds: 3), () {
-    if (mounted) {
-      customReplacementNavigate(context, "/welcome");
-    }
+    customReplacementNavigate(context, path);
   });
 }

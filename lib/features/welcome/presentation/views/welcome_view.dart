@@ -1,7 +1,8 @@
-import 'package:ecommerce_app/core/utils/app_colors.dart';
+import 'package:ecommerce_app/core/database/cache/cache_helper.dart';
 import 'package:ecommerce_app/core/utils/app_strings.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/functions/navigation.dart';
+import '../../../../core/service/service_locator.dart';
 import '../../../../core/widgets/custom_btn.dart';
 import '../widgets/custom_welcome_body.dart';
 
@@ -22,12 +23,12 @@ class WelcomeView extends StatelessWidget {
                 const CustomWelcomeBody(),
                 const SizedBox(height: 234),
                 CustomButton(
-                  text: AppStrings.getStarted,
-                  color: AppColors.primaryColor,
-                  onPressed: () {
-                    customReplacementNavigate(context, "/login");
-                  },
-                ),
+                    text: AppStrings.getStarted,
+                    onPressed: () {
+                      getIt<CacheHelper>()
+                          .saveData(key: "welcomeVisited", value: true);
+                      customReplacementNavigate(context, "/login");
+                    }),
                 const SizedBox(height: 41),
               ],
             ),

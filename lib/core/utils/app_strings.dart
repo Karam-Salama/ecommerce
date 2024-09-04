@@ -5,7 +5,7 @@ abstract class AppStrings {
   // welcome screen
   static const String welcomeTitle = "Welcome to STARSHOP";
   static const String welcomeSubTitle =
-      "Your one-stop destination for hassle-free online shopping";
+      "Your one-stop destination for hassle-free \n online shopping";
   static const String getStarted = "Get Started";
 
   // login screen
@@ -47,7 +47,6 @@ abstract class AppStrings {
   static const String games = " Games";
   static const String stationery = "Stationery";
   static const String hotDeals = "Hot Deals";
-
 
   // category screen
   static const String products = "Products";

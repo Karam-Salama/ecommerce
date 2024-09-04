@@ -1,16 +1,23 @@
-// ignore_for_file: must_be_immutable
-
 import 'package:flutter/material.dart';
 
 import '../utils/app_colors.dart';
 import '../utils/app_text_styles.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, this.color,required this.text,required this.onPressed});
+  const CustomButton({
+    super.key,
+    this.color,
+    this.borderColor,
+    required this.text,
+    required this.onPressed,
+    this.icon, // New property for an optional icon
+  });
 
   final Color? color;
+  final Color? borderColor;
   final String? text;
   final VoidCallback? onPressed;
+  final Icon? icon; // Icon property
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +28,23 @@ class CustomButton extends StatelessWidget {
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: color ?? AppColors.primaryColor,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+            side: BorderSide(color: borderColor ?? Colors.transparent),
+          ),
         ),
-        child: Text(
-          text!,
-          style: CustomTextStyles.lato16style,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            if (icon != null) ...[
+              icon!, // Display icon if it's not null
+              const SizedBox(width: 8), // Space between icon and text
+            ],
+            Text(
+              text!,
+              style: CustomTextStyles.lato16style,
+            ),
+          ],
         ),
       ),
     );

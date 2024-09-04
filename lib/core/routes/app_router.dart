@@ -22,4 +22,8 @@ final GoRouter router = GoRouter(routes: [
     path: "/signup",
     builder: (context, state) => const SignUpView(),
   ),
+    GoRoute(
+    path: "/loginDefault",
+    builder: (context, state) => const CustomLoginDefault(),
+  ),
 ]);

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';  // Import this for TextStyle
+import 'package:flutter/material.dart'; // Import this for TextStyle
 import 'package:ecommerce_app/core/utils/app_colors.dart'; // Ensure correct file contains the color definition
 
 abstract class CustomTextStyles {
@@ -11,8 +11,13 @@ abstract class CustomTextStyles {
 
   static const TextStyle lato16style = TextStyle(
     fontFamily: 'Lato',
-    fontSize: 16,
+    fontSize: 15,
     color: AppColors.greyColor,
   );
-}
 
+  static const TextStyle lato15style = TextStyle(
+    fontFamily: 'Lato',
+    fontSize: 16,
+    color: AppColors.primaryColor,
+  );
+}

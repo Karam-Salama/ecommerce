@@ -85,5 +85,18 @@ class Assets {
   /// Assets for assetsImagesProductsProsuct6
   /// assets/images/products/prosuct-6.png
   static const String assetsImagesProductsProsuct6 = "assets/images/products/prosuct-6.png";
+
+    /// Assets for assetsImagesIconsAllert
+  /// assets/images/icons/allert.png
+  static const String assetsImagesIconsAllert = "assets/images/icons/allert.png";
+
+  /// Assets for assetsImagesIconsEye off
+  /// assets/images/icons/eye off.png
+  static const String assetsImagesIconsEyeoff = "assets/images/icons/eye off.png";
+
+  /// Assets for assetsImagesIconsSuccess
+  /// assets/images/icons/success.png
+  static const String assetsImagesIconsSuccess = "assets/images/icons/success.png";
+
 }
 
