@@ -22,7 +22,7 @@ class CustomHeaderWidget extends StatelessWidget {
       padding: padding,
       child: Align(
         alignment: alignment,
-        child: Text(text, style: textStyle ?? CustomTextStyles.lato16style),
+        child: Text(text, style: textStyle ?? AppTextStyle.lato16style),
       ),
     );
   }

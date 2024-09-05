@@ -42,7 +42,7 @@ class CustomButton extends StatelessWidget {
             ],
             Text(
               text!,
-              style: CustomTextStyles.lato16style,
+              style: AppTextStyle.lato16style,
             ),
           ],
         ),

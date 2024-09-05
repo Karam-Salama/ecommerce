@@ -8,9 +8,9 @@ class WelcomeTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text(
+    return Text(
       AppStrings.welcomeTitle,
-      style: CustomTextStyles.lato30style,
+      style: AppTextStyle.lato16style.copyWith(fontSize: 30),
       textAlign: TextAlign.center,
       maxLines: 2,
       overflow: TextOverflow.ellipsis,

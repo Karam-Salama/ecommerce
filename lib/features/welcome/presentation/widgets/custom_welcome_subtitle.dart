@@ -10,7 +10,7 @@ class WelcomeSubtitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Text(
       AppStrings.welcomeSubTitle,
-      style: CustomTextStyles.lato16style,
+      style: AppTextStyle.lato16style,
       textAlign: TextAlign.center,
       maxLines: 2,
       overflow: TextOverflow.ellipsis,

@@ -23,14 +23,14 @@ class HaveAccountWidget extends StatelessWidget {
           children: [
             TextSpan(
               text: textPart1,
-              style: CustomTextStyles.lato16style,
+              style: AppTextStyle.lato16style,
             ),
             const WidgetSpan(
               child: SizedBox(width: 5),
             ),
             TextSpan(
               text: textPart2,
-              style: CustomTextStyles.lato15style,
+              style: AppTextStyle.lato15style,
             ),
           ],
         ),

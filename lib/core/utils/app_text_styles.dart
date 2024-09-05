@@ -1,10 +1,11 @@
+// ignore_for_file: prefer_const_declarations
+
 import 'package:flutter/material.dart'; // Import this for TextStyle
 import 'package:ecommerce_app/core/utils/app_colors.dart'; // Ensure correct file contains the color definition
 
-abstract class CustomTextStyles {
-  // Use TextStyle from flutter/painting.dart or flutter/material.dart
-  static const TextStyle lato30style = TextStyle(
-    fontFamily: 'Lato',
+abstract class AppTextStyle {
+  static final pacifico400style64 = const TextStyle(
+     fontFamily: 'Lato',
     fontSize: 30,
     color: AppColors.greyColor,
   );

@@ -14,8 +14,8 @@ class TermsAndConditionsWidget extends StatelessWidget {
         CustomCheckBox(),
         Text.rich(TextSpan(children: [
           TextSpan(
-              text: AppStrings.agreeWith, style: CustomTextStyles.lato16style),
-          TextSpan(text: AppStrings.terms, style: CustomTextStyles.lato15style),
+              text: AppStrings.agreeWith, style: AppTextStyle.lato16style),
+          TextSpan(text: AppStrings.terms, style: AppTextStyle.lato15style),
         ])),
       ],
     );

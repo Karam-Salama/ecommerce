@@ -21,7 +21,7 @@ class CustomOrDivider extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 8.0),
           child: Text(
             AppStrings.or,
-            style: CustomTextStyles.lato16style,
+            style: AppTextStyle.lato16style,
           ),
         ),
         Expanded(
