@@ -1,5 +1,8 @@
+import 'package:ecommerce_app/core/service/service_locator.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../features/auth/presentation/auth_cubit/auth_cubit.dart';
 import '../../features/auth/presentation/views/default_sign_in_view.dart';
 import '../../features/auth/presentation/views/default_sign_up_view.dart';
 import '../../features/auth/presentation/views/sign_in_view.dart';
@@ -18,18 +21,30 @@ final GoRouter router = GoRouter(routes: [
   ),
   GoRoute(
     path: "/signup",
-    builder: (context, state) => const SignUpView(),
+    builder: (context, state) => BlocProvider(
+      create: (context) => getIt<AuthCubit>(),
+      child: const SignUpView(),
+    ),
   ),
   GoRoute(
     path: "/signUpDefault",
-    builder: (context, state) => const DefaultSignUpView(),
+    builder: (context, state) => BlocProvider(
+      create: (context) => getIt<AuthCubit>(),
+      child: const DefaultSignUpView(),
+    ),
   ),
   GoRoute(
     path: "/login",
-    builder: (context, state) => const LoginView(),
+    builder: (context, state) => BlocProvider(
+      create: (context) => getIt<AuthCubit>(),
+      child: const LoginView(),
+    ),
   ),
   GoRoute(
     path: "/loginDefault",
-    builder: (context, state) => const DefaultSignInView(),
+    builder: (context, state) => BlocProvider(
+      create: (context) => getIt<AuthCubit>(),
+      child: const DefaultSignInView(),
+    ),
   ),
 ]);

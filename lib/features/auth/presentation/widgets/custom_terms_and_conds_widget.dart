@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/utils/app_strings.dart';
 import '../../../../core/utils/app_text_styles.dart';
-import 'custom_checkBox_widget.dart';
+import 'custom_checkbox_widget.dart';
 
 class TermsAndConditionsWidget extends StatelessWidget {
   const TermsAndConditionsWidget({super.key});
