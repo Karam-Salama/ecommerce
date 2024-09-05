@@ -27,7 +27,7 @@ class WelcomeView extends StatelessWidget {
                     onPressed: () {
                       getIt<CacheHelper>()
                           .saveData(key: "welcomeVisited", value: true);
-                      customReplacementNavigate(context, "/login");
+                      customReplacementNavigate(context, "/signup");
                     }),
                 const SizedBox(height: 41),
               ],

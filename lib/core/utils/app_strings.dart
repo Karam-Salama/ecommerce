@@ -22,6 +22,8 @@ abstract class AppStrings {
   static const String forgotPassword = "Forgot Password";
   static const String or = "Or";
   static const String dontHaveAccount = "Don’t have any account yet?";
+  static const String agreeWith = "Agree with ";
+  static const String terms = "Terms & Condition";
 
   // register screen
   static const String signUpToStarShop = "Sign up to STARSHOP";

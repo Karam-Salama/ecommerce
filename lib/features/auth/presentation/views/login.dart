@@ -30,7 +30,9 @@ class LoginView extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 0),
               ),
               const SizedBox(height: 69),
-              const CustomSocialBtns(),
+              CustomSocialBtns(
+                  text1: AppStrings.loginWithGoogle,
+                  text2: AppStrings.loginWithApple),
               const SizedBox(height: 48),
               const CustomOrDivider(),
               const SizedBox(height: 48),
@@ -43,7 +45,9 @@ class LoginView extends StatelessWidget {
               HaveAccountWidget(
                 textPart1: AppStrings.dontHaveAccount,
                 textPart2: AppStrings.signup,
-                onPress: () {},
+                onPress: () {
+                  customReplacementNavigate(context, '/signUp');
+                },
               ),
               const SizedBox(height: 64),
             ],
@@ -109,8 +113,6 @@ class CustomLoginDefault extends StatelessWidget {
     );
   }
 }
-
-
 
 class CustomLoginForm extends StatelessWidget {
   const CustomLoginForm({super.key});

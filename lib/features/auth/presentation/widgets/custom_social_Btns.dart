@@ -1,11 +1,14 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/app_colors.dart';
-import '../../../../core/utils/app_strings.dart';
 import '../../../../core/widgets/custom_btn.dart';
 
 class CustomSocialBtns extends StatelessWidget {
-  const CustomSocialBtns({super.key});
+  CustomSocialBtns({super.key,this.text1,this.text2});
+  String? text1;
+  String? text2;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +20,7 @@ class CustomSocialBtns extends StatelessWidget {
             color: AppColors.primaryColor,
             size: 25,
           ),
-          text: AppStrings.loginWithGoogle,
+          text: text1!,
           color: AppColors.backgroundColor,
           borderColor: AppColors.primaryColor,
           onPressed: () {},
@@ -29,7 +32,7 @@ class CustomSocialBtns extends StatelessWidget {
             color: AppColors.primaryColor,
             size: 25,
           ),
-          text: AppStrings.loginWithApple,
+          text: text2!,
           color: AppColors.backgroundColor,
           borderColor: AppColors.primaryColor,
           onPressed: () {},

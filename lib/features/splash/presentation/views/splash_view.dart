@@ -18,7 +18,7 @@ class _SplashViewState extends State<SplashView> {
     bool welcomeVisited =
         getIt<CacheHelper>().getData(key: "welcomeVisited") ?? false;
     if (welcomeVisited) {
-      delayedNavigate(context, "/login");
+      delayedNavigate(context, "/signup");
     } else {
       delayedNavigate(context, "/welcome");
     }
