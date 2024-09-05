@@ -4,22 +4,24 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/utils/app_colors.dart';
 
-class CustomTextField extends StatelessWidget {
+class CustomTextFormField extends StatelessWidget {
   final String labelText;
   final String hintText;
-  final TextEditingController? controller;
   final bool obscureText;
   final TextInputType keyboardType;
   final Widget? suffixIcon;
+  final Function(String)? onChanged;
+  final Function(String)? onFieldSubmitted;
 
-  const CustomTextField({
+  const CustomTextFormField({
     super.key,
     required this.labelText,
     required this.hintText,
-    this.controller,
     this.obscureText = false,
     this.keyboardType = TextInputType.text,
     this.suffixIcon,
+    this.onChanged,
+    this.onFieldSubmitted,
   });
 
   @override
@@ -32,8 +34,9 @@ class CustomTextField extends StatelessWidget {
           style: const TextStyle(color: AppColors.greyColor, fontSize: 14.0),
         ),
         const SizedBox(height: 8),
-        TextField(
-          controller: controller,
+        TextFormField(
+          onChanged: onChanged,
+          onFieldSubmitted: onFieldSubmitted,
           obscureText: obscureText,
           keyboardType: keyboardType,
           style: const TextStyle(color: AppColors.greyColor, fontSize: 12.0),

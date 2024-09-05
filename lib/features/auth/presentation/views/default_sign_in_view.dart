@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
 import '../../../../core/utils/app_text_styles.dart';
 import '../../../../core/widgets/custom_btn.dart';
 import '../widgets/custom_header_widget.dart';
-import '../widgets/cutom_textField.dart';
+import '../widgets/custom_signIn_form.dart';
 
 class DefaultSignInView extends StatelessWidget {
   const DefaultSignInView({super.key});
@@ -28,22 +27,7 @@ class DefaultSignInView extends StatelessWidget {
               ),
             ),
             const SliverToBoxAdapter(child: SizedBox(height: 58)),
-            const SliverToBoxAdapter(
-              child: CustomTextField(
-                labelText: AppStrings.email,
-                hintText: AppStrings.enterEmail,
-                keyboardType: TextInputType.emailAddress,
-              ),
-            ),
-            const SliverToBoxAdapter(child: SizedBox(height: 16)),
-            const SliverToBoxAdapter(
-                child: CustomTextField(
-              labelText: AppStrings.password,
-              hintText: AppStrings.enterPassword,
-              keyboardType: TextInputType.visiblePassword,
-              obscureText: true,
-              suffixIcon: Icon(Icons.visibility, color: AppColors.greyColor),
-            )),
+            const SliverToBoxAdapter(child: CustomLoginForm()),
             const SliverToBoxAdapter(child: SizedBox(height: 8)),
             const SliverToBoxAdapter(
               child: CustomHeaderWidget(
@@ -55,19 +39,14 @@ class DefaultSignInView extends StatelessWidget {
             ),
             const SliverToBoxAdapter(child: SizedBox(height: 48)),
             SliverToBoxAdapter(
-                child: CustomButton(text: AppStrings.login, onPressed: () {})),
+              child: CustomButton(
+                text: AppStrings.login,
+                onPressed: () {},
+              ),
+            ),
           ],
         ),
       ),
     );
-  }
-}
-
-class CustomLoginForm extends StatelessWidget {
-  const CustomLoginForm({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold();
   }
 }
