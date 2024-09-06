@@ -29,6 +29,7 @@ dependencies:
   firebase_core: ^3.4.0
   firebase_auth: ^5.2.0
   cherry_toast: ^1.11.0
+  email_validator: ^3.0.0
 
 
 # Dev dependencies specify other packages that your package needs in order to work.

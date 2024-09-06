@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../core/functions/validation.dart';
 import '../../../../core/utils/app_strings.dart';
 import 'cutom_textField.dart';
 
@@ -23,6 +24,7 @@ class CustomNameFieldsRow extends StatelessWidget {
             hintText: AppStrings.enterFirstName,
             keyboardType: TextInputType.name,
             onChanged: onFirstNameChanged,
+            validator: Validation.validateFirstName,
           ),
         ),
         const SizedBox(width: 16), // Space between fields
@@ -32,6 +34,7 @@ class CustomNameFieldsRow extends StatelessWidget {
             hintText: AppStrings.enterLastName,
             keyboardType: TextInputType.name,
             onChanged: onLastNameChanged,
+            validator: Validation.validateLastName,
           ),
         ),
       ],

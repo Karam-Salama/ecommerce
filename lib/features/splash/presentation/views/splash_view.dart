@@ -20,7 +20,7 @@ class _SplashViewState extends State<SplashView> {
         getIt<CacheHelper>().getData(key: "welcomeVisited") ?? false;
     if (welcomeVisited) {
       FirebaseAuth.instance.currentUser == null
-          ? delayedNavigate(context, "/signup")
+          ? delayedNavigate(context, "/loginDefault")
           : delayedNavigate(context, "/home");
     } else {
       delayedNavigate(context, "/welcome");

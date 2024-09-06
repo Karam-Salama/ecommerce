@@ -1,14 +1,15 @@
-import 'package:cherry_toast/cherry_toast.dart';
 import 'package:ecommerce_app/features/auth/presentation/auth_cubit/auth_cubit.dart';
 import 'package:ecommerce_app/features/auth/presentation/auth_cubit/auth_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/functions/navigation.dart';
+import '../../../../core/functions/validation.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
 import '../../../../core/widgets/custom_btn.dart';
+import 'custom_error_bottom_sheet.dart';
 import 'custom_name_fields_row.dart';
+import 'custom_success_bottom_sheet.dart';
 import 'custom_terms_and_conds_widget.dart';
 import 'cutom_textField.dart';
 
@@ -20,15 +21,30 @@ class CustomSignUpForm extends StatelessWidget {
     return BlocConsumer<AuthCubit, AuthState>(
       listener: (BuildContext context, state) {
         if (state is SignUpSuccessState) {
-          showToast(context, "Successfully, Check Your Email To Verify Your Account");
-          Future.delayed(
-            const Duration(seconds: 2),
-            () {
-              customReplacementNavigate(context, '/home');
-            },
+          showModalBottomSheet(
+            context: context,
+            backgroundColor: Colors.transparent,
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.vertical(
+                top: Radius.circular(16),
+              ),
+            ),
+            isScrollControlled: true,
+            builder: (context) => const SuccessBottomSheet(),
           );
         } else if (state is SignUpErrorState) {
-          showToast(context, state.errorMessage);
+          showModalBottomSheet(
+            context: context,
+            backgroundColor: Colors.transparent,
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.vertical(
+                top: Radius.circular(16),
+              ),
+            ),
+            isScrollControlled: true,
+            builder: (context) =>
+                ErrorBottomSheet(errorMessage: state.errorMessage),
+          );
         }
       },
       builder: (context, state) {
@@ -53,6 +69,7 @@ class CustomSignUpForm extends StatelessWidget {
                 onChanged: (email) {
                   authCubit.emailAddress = email;
                 },
+                validator: Validation.validateEmail,
               ),
               const SizedBox(height: 16),
               CustomTextFormField(
@@ -74,6 +91,7 @@ class CustomSignUpForm extends StatelessWidget {
                 onChanged: (password) {
                   authCubit.password = password;
                 },
+                validator: Validation.validatePassword,
               ),
               const SizedBox(height: 16),
               CustomTextFormField(
@@ -95,6 +113,10 @@ class CustomSignUpForm extends StatelessWidget {
                 onChanged: (confirmPassword) {
                   authCubit.confirmPassword = confirmPassword;
                 },
+                validator: (value) => Validation.validateConfirmPassword(
+                  value,
+                  authCubit.password ?? '',
+                ),
               ),
               const SizedBox(height: 16),
               const TermsAndConditionsWidget(),
@@ -116,24 +138,12 @@ class CustomSignUpForm extends StatelessWidget {
                             await authCubit.signUpWithEmailAndPassword();
                           }
                         }
-                      }),
+                      },
+                    ),
             ],
           ),
         );
       },
     );
-  }
-
-  void showToast(BuildContext context, String message) {
-    CherryToast.success(
-      inheritThemeColors: true,
-      title: Text(
-        message,
-        style: const TextStyle(
-          color: Colors.black,
-        ),
-      ),
-      borderRadius: 0,
-    ).show(context);
   }
 }

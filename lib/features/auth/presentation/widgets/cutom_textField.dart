@@ -12,6 +12,7 @@ class CustomTextFormField extends StatelessWidget {
   final Widget? suffixIcon;
   final Function(String)? onChanged;
   final Function(String)? onFieldSubmitted;
+  final String? Function(String?)? validator; // New validator parameter
 
   const CustomTextFormField({
     super.key,
@@ -22,6 +23,7 @@ class CustomTextFormField extends StatelessWidget {
     this.suffixIcon,
     this.onChanged,
     this.onFieldSubmitted,
+    this.validator, // Initialize the validator
   });
 
   @override
@@ -35,11 +37,7 @@ class CustomTextFormField extends StatelessWidget {
         ),
         const SizedBox(height: 8),
         TextFormField(
-          validator: (value) {
-            if (value == null || value.isEmpty) {
-              return 'Please enter some text';
-            }
-          },
+          validator: validator,
           onChanged: onChanged,
           onFieldSubmitted: onFieldSubmitted,
           obscureText: obscureText!,

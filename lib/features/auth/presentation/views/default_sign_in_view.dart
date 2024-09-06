@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../../../../core/functions/navigation.dart';
 import '../../../../core/utils/app_strings.dart';
 import '../../../../core/utils/app_text_styles.dart';
 import '../../../../core/widgets/custom_btn.dart';
+import '../widgets/custom_have_account_widget.dart';
 import '../widgets/custom_header_widget.dart';
 import '../widgets/custom_signIn_form.dart';
 
@@ -42,6 +44,16 @@ class DefaultSignInView extends StatelessWidget {
               child: CustomButton(
                 text: AppStrings.login,
                 onPressed: () {},
+              ),
+            ),
+            const SliverToBoxAdapter(child: SizedBox(height: 48)),
+            SliverToBoxAdapter(
+              child: HaveAccountWidget(
+                textPart1: AppStrings.dontHaveAccount,
+                textPart2: AppStrings.signup,
+                onPress: () {
+                  customReplacementNavigate(context, '/signUp');
+                },
               ),
             ),
           ],
