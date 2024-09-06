@@ -24,6 +24,10 @@ abstract class AppStrings {
   static const String dontHaveAccount = "Don’t have any account yet?";
   static const String agreeWith = "Agree with ";
   static const String terms = "Terms & Condition";
+  static const String firstName = "First Name";
+  static const String lastName = "Last Name";
+  static const String enterFirstName = "Enter your First Name";
+  static const String enterLastName = "Enter your Last Name";
 
   // register screen
   static const String signUpToStarShop = "Sign up to STARSHOP";

@@ -7,7 +7,7 @@ import '../../../../core/utils/app_colors.dart';
 class CustomTextFormField extends StatelessWidget {
   final String labelText;
   final String hintText;
-  final bool obscureText;
+  final bool? obscureText;
   final TextInputType keyboardType;
   final Widget? suffixIcon;
   final Function(String)? onChanged;
@@ -35,9 +35,14 @@ class CustomTextFormField extends StatelessWidget {
         ),
         const SizedBox(height: 8),
         TextFormField(
+          validator: (value) {
+            if (value == null || value.isEmpty) {
+              return 'Please enter some text';
+            }
+          },
           onChanged: onChanged,
           onFieldSubmitted: onFieldSubmitted,
-          obscureText: obscureText,
+          obscureText: obscureText!,
           keyboardType: keyboardType,
           style: const TextStyle(color: AppColors.greyColor, fontSize: 12.0),
           decoration: InputDecoration(

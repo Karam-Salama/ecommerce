@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/core/database/cache/cache_helper.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/functions/navigation.dart';
@@ -18,7 +19,9 @@ class _SplashViewState extends State<SplashView> {
     bool welcomeVisited =
         getIt<CacheHelper>().getData(key: "welcomeVisited") ?? false;
     if (welcomeVisited) {
-      delayedNavigate(context, "/signup");
+      FirebaseAuth.instance.currentUser == null
+          ? delayedNavigate(context, "/signup")
+          : delayedNavigate(context, "/home");
     } else {
       delayedNavigate(context, "/welcome");
     }
