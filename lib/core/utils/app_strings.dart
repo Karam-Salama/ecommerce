@@ -28,6 +28,9 @@ abstract class AppStrings {
   static const String lastName = "Last Name";
   static const String enterFirstName = "Enter your First Name";
   static const String enterLastName = "Enter your Last Name";
+  static const String forgotPasswordScreenSubTitle = "Enter your email id for the verification process,\n we will send 4 digit to your email";
+  static const String continueText = "continue";
+  static const String resetPasswordSuccessMessage = "Reset password success";
 
   // register screen
   static const String signUpToStarShop = "Sign up to STARSHOP";

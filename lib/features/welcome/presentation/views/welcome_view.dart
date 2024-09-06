@@ -1,5 +1,5 @@
-import 'package:ecommerce_app/core/database/cache/cache_helper.dart';
-import 'package:ecommerce_app/core/utils/app_strings.dart';
+import '../../../../core/database/cache/cache_helper.dart';
+import '../../../../core/utils/app_strings.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/functions/navigation.dart';
 import '../../../../core/service/service_locator.dart';

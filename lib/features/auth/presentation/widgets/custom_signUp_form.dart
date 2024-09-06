@@ -1,5 +1,6 @@
-import 'package:ecommerce_app/features/auth/presentation/auth_cubit/auth_cubit.dart';
-import 'package:ecommerce_app/features/auth/presentation/auth_cubit/auth_state.dart';
+import '../../../../core/functions/navigation.dart';
+import '../auth_cubit/auth_cubit.dart';
+import '../auth_cubit/auth_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -30,7 +31,13 @@ class CustomSignUpForm extends StatelessWidget {
               ),
             ),
             isScrollControlled: true,
-            builder: (context) => const SuccessBottomSheet(),
+            builder: (context) => SuccessBottomSheet(
+              message: 'check your email and activate your account',
+              buttonText: 'Done',
+              onButtonPressed: () {
+                customReplacementNavigate(context, '/loginDefault');
+              },
+            ),
           );
         } else if (state is SignUpErrorState) {
           showModalBottomSheet(
@@ -42,8 +49,13 @@ class CustomSignUpForm extends StatelessWidget {
               ),
             ),
             isScrollControlled: true,
-            builder: (context) =>
-                ErrorBottomSheet(errorMessage: state.errorMessage),
+            builder: (context) => ErrorBottomSheet(
+              errorMessage: state.errorMessage,
+              buttonText: 'Try Again',
+              onButtonPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
           );
         }
       },

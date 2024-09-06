@@ -1,5 +1,5 @@
-import 'package:ecommerce_app/core/database/cache/cache_helper.dart';
-import 'package:ecommerce_app/firebase_options.dart';
+import 'core/database/cache/cache_helper.dart';
+import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'core/functions/check_state_changes.dart';

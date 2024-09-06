@@ -1,7 +1,7 @@
-import 'package:ecommerce_app/core/functions/navigation.dart';
-import 'package:ecommerce_app/core/utils/app_strings.dart';
-import 'package:ecommerce_app/core/utils/app_text_styles.dart';
-import 'package:ecommerce_app/core/widgets/custom_btn.dart';
+import '../../../../core/functions/navigation.dart';
+import '../../../../core/utils/app_strings.dart';
+import '../../../../core/utils/app_text_styles.dart';
+import '../../../../core/widgets/custom_btn.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/custom_have_account_widget.dart';

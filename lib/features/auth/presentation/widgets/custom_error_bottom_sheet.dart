@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 
 class ErrorBottomSheet extends StatelessWidget {
   final String errorMessage;
+  final String buttonText;
+  final VoidCallback? onButtonPressed;
 
-  const ErrorBottomSheet({super.key, required this.errorMessage});
+  const ErrorBottomSheet({
+    super.key,
+    required this.errorMessage,
+    this.buttonText = 'Close',
+    this.onButtonPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -43,12 +50,10 @@ class ErrorBottomSheet extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8),
               ),
             ),
-            onPressed: () {
-              Navigator.of(context).pop(); // Close the bottom sheet
-            },
-            child: const Text(
-              'Close',
-              style: TextStyle(
+            onPressed: onButtonPressed ?? () => Navigator.of(context).pop(), // Close the bottom sheet
+            child: Text(
+              buttonText,
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 16,
               ),

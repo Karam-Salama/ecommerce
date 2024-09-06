@@ -1,11 +1,17 @@
-import 'package:ecommerce_app/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../core/functions/navigation.dart';
 import '../../../../core/widgets/custom_btn.dart';
 
 class SuccessBottomSheet extends StatelessWidget {
-  const SuccessBottomSheet({super.key});
+  final String message;
+  final String buttonText;
+  final VoidCallback? onButtonPressed;
+
+  const SuccessBottomSheet({
+    super.key,
+    required this.message,
+    this.buttonText = 'Done',
+    this.onButtonPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +19,7 @@ class SuccessBottomSheet extends StatelessWidget {
       width: double.infinity, // Full width of the screen
       padding: const EdgeInsets.all(20.0),
       decoration: const BoxDecoration(
-        color: AppColors.backgroundColor,
+        color: Color(0xFF2C2C36), // Use the color from AppColors or adjust as needed
         borderRadius: BorderRadius.vertical(
           top: Radius.circular(16),
         ),
@@ -27,19 +33,20 @@ class SuccessBottomSheet extends StatelessWidget {
             size: 60,
           ),
           const SizedBox(height: 16),
-          const Text(
-            'Signup Successful!',
-            style: TextStyle(
+          Text(
+            message,
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
+            textAlign: TextAlign.center,
           ),
           const SizedBox(height: 24),
           CustomButton(
-            text: 'Done',
-            onPressed: () {
-              customReplacementNavigate(context, '/home');
+            text: buttonText,
+            onPressed: onButtonPressed ?? () {
+              Navigator.of(context).pop(); // Default action
             },
           ),
         ],

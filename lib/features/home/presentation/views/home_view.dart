@@ -1,5 +1,5 @@
-import 'package:ecommerce_app/core/functions/navigation.dart';
-import 'package:ecommerce_app/core/utils/app_colors.dart';
+import '../../../../core/functions/navigation.dart';
+import '../../../../core/utils/app_colors.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
