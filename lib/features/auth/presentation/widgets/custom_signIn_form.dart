@@ -13,7 +13,6 @@ import '../auth_cubit/auth_cubit.dart';
 import 'custom_error_bottom_sheet.dart';
 import 'custom_header_widget.dart';
 import 'custom_success_bottom_sheet.dart';
-import 'custom_warning_dialog.dart';
 import 'cutom_textField.dart';
 
 class CustomLoginForm extends StatelessWidget {
@@ -25,50 +24,9 @@ class CustomLoginForm extends StatelessWidget {
     return BlocConsumer<AuthCubit, AuthState>(
       listener: (BuildContext context, state) {
         if (state is SignInSuccessState) {
-          if (FirebaseAuth.instance.currentUser!.emailVerified) {
-            showModalBottomSheet(
-              context: context,
-              backgroundColor: Colors.transparent,
-              shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.vertical(
-                  top: Radius.circular(16),
-                ),
-              ),
-              isScrollControlled: true,
-              builder: (context) => SuccessBottomSheet(
-                message: 'Login Successful',
-                buttonText: 'Go To Home',
-                onButtonPressed: () {
-                  customReplacementNavigate(context, '/home');
-                },
-              ),
-            );
-          } else {
-            showDialog(
-              context: context,
-              builder: (context) => const WarningDialog(
-                message: "Please Verify Your Email Address",
-              ),
-            );
-          }
+          handleSomeCasesInSuccessStateForSignIn(context);
         } else if (state is SignInErrorState) {
-          showModalBottomSheet(
-            context: context,
-            backgroundColor: Colors.transparent,
-            shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.vertical(
-                top: Radius.circular(16),
-              ),
-            ),
-            isScrollControlled: true,
-            builder: (context) => ErrorBottomSheet(
-              errorMessage: state.errorMessage,
-              buttonText: 'Try Again',
-              onButtonPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-          );
+          handleSomeCasesInErrorStateForSignIn(context, state);
         }
       },
       builder: (context, state) {
@@ -134,5 +92,65 @@ class CustomLoginForm extends StatelessWidget {
         );
       },
     );
+  }
+
+  void handleSomeCasesInErrorStateForSignIn(BuildContext context, SignInErrorState state) {
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: Colors.transparent,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(16),
+        ),
+      ),
+      isScrollControlled: true,
+      builder: (context) => ErrorBottomSheet(
+        errorMessage: state.errorMessage,
+        buttonText: 'Try Again',
+        onButtonPressed: () {
+          Navigator.of(context).pop();
+        },
+      ),
+    );
+  }
+
+  void handleSomeCasesInSuccessStateForSignIn(BuildContext context) {
+    if (FirebaseAuth.instance.currentUser!.emailVerified) {
+      showModalBottomSheet(
+        context: context,
+        backgroundColor: Colors.transparent,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(16),
+          ),
+        ),
+        isScrollControlled: true,
+        builder: (context) => SuccessBottomSheet(
+          message: 'Login Successful',
+          buttonText: 'Go To Home',
+          onButtonPressed: () {
+            customReplacementNavigate(context, '/home');
+          },
+        ),
+      );
+    } else {
+      showModalBottomSheet(
+        context: context,
+        backgroundColor: Colors.transparent,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(16),
+          ),
+        ),
+        isScrollControlled: true,
+        builder: (context) => SuccessBottomSheet(
+          message: 'Please Verify Your Email Address',
+          buttonText: 'Let\'s Go To Verification',
+          onButtonPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+      );
+    }
   }
 }

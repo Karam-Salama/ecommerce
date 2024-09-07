@@ -22,35 +22,10 @@ class ForgetPasswordForm extends StatelessWidget {
       listener: (context, state) {
         if (state is ResetPasswordSuccessState) {
           // Show Success Bottom Sheet
-          showModalBottomSheet(
-            context: context,
-            isScrollControlled: true,
-            builder: (BuildContext context) {
-              return SuccessBottomSheet(
-                message: 'Check your email and Reset Password',
-                buttonText: 'Done',
-                onButtonPressed: () {
-                  customReplacementNavigate(
-                      context, '/loginDefault'); // Close the bottom sheet
-                },
-              );
-            },
-          );
+          handleSomeCasesInSuccessStateForForgetPassword(context);
         } else if (state is ResetPasswordErrorState) {
           // Show Error Bottom Sheet
-          showModalBottomSheet(
-            context: context,
-            isScrollControlled: true,
-            builder: (BuildContext context) {
-              return ErrorBottomSheet(
-                errorMessage: state.errorMessage,
-                buttonText: 'Retry',
-                onButtonPressed: () {
-                  Navigator.pop(context); // Close the bottom sheet
-                },
-              );
-            },
-          );
+          handleSomeCasesInErrorStateForForgetPassword(context, state);
         }
       },
       builder: (context, state) {
@@ -73,7 +48,7 @@ class ForgetPasswordForm extends StatelessWidget {
                       color: AppColors.primaryColor,
                     )
                   : CustomButton(
-                      text: AppStrings.continueText,
+                      text: AppStrings.sendResetPasswordLink,
                       onPressed: () async {
                         if (authCubit.forgetPasswordFormKey.currentState!
                             .validate()) {
@@ -84,6 +59,39 @@ class ForgetPasswordForm extends StatelessWidget {
               const SizedBox(height: 48),
             ],
           ),
+        );
+      },
+    );
+  }
+
+  void handleSomeCasesInErrorStateForForgetPassword(BuildContext context, ResetPasswordErrorState state) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      builder: (BuildContext context) {
+        return ErrorBottomSheet(
+          errorMessage: state.errorMessage,
+          buttonText: 'Retry',
+          onButtonPressed: () {
+            Navigator.pop(context); // Close the bottom sheet
+          },
+        );
+      },
+    );
+  }
+
+  void handleSomeCasesInSuccessStateForForgetPassword(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      builder: (BuildContext context) {
+        return SuccessBottomSheet(
+          message: 'Check your email and Reset Password',
+          buttonText: 'Done',
+          onButtonPressed: () {
+            customReplacementNavigate(
+                context, '/loginDefault'); // Close the bottom sheet
+          },
         );
       },
     );

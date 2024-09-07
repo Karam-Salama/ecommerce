@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -24,7 +25,7 @@ class AuthCubit extends Cubit<AuthState> {
         email: emailAddress!,
         password: password!,
       );
-      // await addUserProfile();
+      await addUserProfile();
       await verifyEmail();
       emit(SignUpSuccessState());
     } on FirebaseAuthException catch (e) {
@@ -113,12 +114,13 @@ class AuthCubit extends Cubit<AuthState> {
     }
   }
 
-  // Future<void> addUserProfile() async {
-  //   CollectionReference users = FirebaseFirestore.instance.collection('users');
-  //   await users.add({
-  //     'emailAddress': emailAddress,
-  //     'firstName': firstName,
-  //     'lastName': lastName,
-  //   });
-  // }
+  Future<void> addUserProfile() async {
+    // Create a CollectionReference called users that references the firestore collection
+    CollectionReference users = FirebaseFirestore.instance.collection('users');
+    await users.add({
+      'emailAddress': emailAddress,
+      'firstName': firstName,
+      'lastName': lastName,
+    });
+  }
 }

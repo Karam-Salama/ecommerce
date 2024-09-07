@@ -21,7 +21,7 @@ class _SplashViewState extends State<SplashView> {
     if (welcomeVisited) {
       FirebaseAuth.instance.currentUser == null
           ? delayedNavigate(context, "/loginDefault")
-          : delayedNavigate(context, "/home");
+          : FirebaseAuth.instance.currentUser!.emailVerified == true ? delayedNavigate(context, "/home") : delayedNavigate(context, "/loginDefault");
     } else {
       delayedNavigate(context, "/welcome");
     }

@@ -22,41 +22,9 @@ class CustomSignUpForm extends StatelessWidget {
     return BlocConsumer<AuthCubit, AuthState>(
       listener: (BuildContext context, state) {
         if (state is SignUpSuccessState) {
-          showModalBottomSheet(
-            context: context,
-            backgroundColor: Colors.transparent,
-            shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.vertical(
-                top: Radius.circular(16),
-              ),
-            ),
-            isScrollControlled: true,
-            builder: (context) => SuccessBottomSheet(
-              message: 'check your email and activate your account',
-              buttonText: 'Done',
-              onButtonPressed: () {
-                customReplacementNavigate(context, '/loginDefault');
-              },
-            ),
-          );
+          handleSomeCasesInSuccessStateForSignUp(context);
         } else if (state is SignUpErrorState) {
-          showModalBottomSheet(
-            context: context,
-            backgroundColor: Colors.transparent,
-            shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.vertical(
-                top: Radius.circular(16),
-              ),
-            ),
-            isScrollControlled: true,
-            builder: (context) => ErrorBottomSheet(
-              errorMessage: state.errorMessage,
-              buttonText: 'Try Again',
-              onButtonPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-          );
+          handleSomeCasesInErrorStateForSignUp(context, state);
         }
       },
       builder: (context, state) {
@@ -156,6 +124,46 @@ class CustomSignUpForm extends StatelessWidget {
           ),
         );
       },
+    );
+  }
+
+  void handleSomeCasesInErrorStateForSignUp(BuildContext context, SignUpErrorState state) {
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: Colors.transparent,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(16),
+        ),
+      ),
+      isScrollControlled: true,
+      builder: (context) => ErrorBottomSheet(
+        errorMessage: state.errorMessage,
+        buttonText: 'Try Again',
+        onButtonPressed: () {
+          Navigator.of(context).pop();
+        },
+      ),
+    );
+  }
+
+  void handleSomeCasesInSuccessStateForSignUp(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: Colors.transparent,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(16),
+        ),
+      ),
+      isScrollControlled: true,
+      builder: (context) => SuccessBottomSheet(
+        message: 'Successfully, check your email and activate your account',
+        buttonText: 'Let\'s Go To Verification',
+        onButtonPressed: () {
+          customReplacementNavigate(context, '/loginDefault');
+        },
+      ),
     );
   }
 }
