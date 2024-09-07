@@ -84,20 +84,24 @@ class AuthCubit extends Cubit<AuthState> {
       // * emit sign in success state
       emit(SignInSuccessState());
     } on FirebaseAuthException catch (e) {
-      if (e.code == 'user-not-found') {
-        // ! emit sign in error state
-        emit(SignInErrorState(errorMessage: 'No user found for that email.'));
-      } else if (e.code == 'wrong-password') {
-        // ! emit sign in error state
-        emit(SignInErrorState(
-            errorMessage: 'Wrong password provided for that user.'));
-      } else {
-        // ! emit sign in error state
-        emit(SignInErrorState(errorMessage: "Check your email and password"));
-      }
+      _signInHandelException(e);
     } catch (e) {
       // ! emit sign in error state
       emit(SignInErrorState(errorMessage: e.toString()));
+    }
+  }
+
+  void _signInHandelException(FirebaseAuthException e) {
+    if (e.code == 'user-not-found') {
+      // ! emit sign in error state
+      emit(SignInErrorState(errorMessage: 'No user found for that email.'));
+    } else if (e.code == 'wrong-password') {
+      // ! emit sign in error state
+      emit(SignInErrorState(
+          errorMessage: 'Wrong password provided for that user.'));
+    } else {
+      // ! emit sign in error state
+      emit(SignInErrorState(errorMessage: "Check your email and password"));
     }
   }
 
