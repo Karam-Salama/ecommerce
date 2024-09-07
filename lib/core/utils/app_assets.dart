@@ -4,59 +4,118 @@ class Assets {
 
   /// Assets for assetsImagesAuthLoginSuccess
   /// assets/images/auth/Login-success.png
-  static const String assetsImagesAuthLoginSuccess = "assets/images/auth/Login-success.png";
+  static const String assetsImagesAuthLoginSuccess =
+      "assets/images/auth/Login-success.png";
 
   /// Assets for assetsImagesAuthSignUpSuccess
   /// assets/images/auth/signUp-success.png
-  static const String assetsImagesAuthSignUpSuccess = "assets/images/auth/signUp-success.png";
+  static const String assetsImagesAuthSignUpSuccess =
+      "assets/images/auth/signUp-success.png";
 
-  /// Assets for assetsImagesBannersImage 1
-  /// assets/images/banners/image 1.png
-  static const String assetsImagesBannersImage1 = "assets/images/banners/image 1.png";
+  /// Assets for assetsImagesBannersSales
+  /// assets/images/banners/sales.png
+  static const String assetsImagesBannersSales =
+      "assets/images/banners/sales.png";
 
-  /// Assets for assetsImagesBannersYoungBeautifulFashionableCaucasianWomanHoldsShoppingBagsOneHandSmartphoneAnotherIsolatedWhite 1
-  /// assets/images/banners/young-beautiful-fashionable-caucasian-woman-holds-shopping-bags-one-hand-smartphone-another-isolated-white 1.png
-  static const String  banner1 = "assets/images/banners/young-beautiful-fashionable-caucasian-woman-holds-shopping-bags-one-hand-smartphone-another-isolated-white 1.png";
+  /// Assets for assetsImagesBannersYoungBeautifulGirl
+  /// assets/images/banners/young-beautiful_girl.png
+  static const String assetsImagesBannersYoungBeautifulGirl =
+      "assets/images/banners/young-beautiful_girl.png";
 
-  /// Assets for assetsImagesBottomNavBarSaved icon
-  /// assets/images/bottom_nav_bar/saved icon.png
-  static const String assetsImagesBottomNavBarSavedIcon = "assets/images/bottom_nav_bar/saved icon.png";
+  /// Assets for assetsImagesBottomNavBarCartIcon
+  /// assets/images/bottom_nav_bar/cart_Icon.png
+  static const String assetsImagesBottomNavBarCartIcon =
+      "assets/images/bottom_nav_bar/cart_Icon.png";
 
-  /// Assets for assetsImagesBottomNavBarShoppingCart
-  /// assets/images/bottom_nav_bar/shopping-cart.png
-  static const String assetsImagesBottomNavBarShoppingCart = "assets/images/bottom_nav_bar/shopping-cart.png";
+  /// Assets for assetsImagesBottomNavBarCartVector
+  /// assets/images/bottom_nav_bar/cart_Vector.png
+  static const String assetsImagesBottomNavBarCartVector =
+      "assets/images/bottom_nav_bar/cart_Vector.png";
 
-  /// Assets for assetsImagesBottomNavBarUser icon
-  /// assets/images/bottom_nav_bar/user icon.png
-  static const String assetsImagesBottomNavBarUserIcon = "assets/images/bottom_nav_bar/user icon.png";
+  /// Assets for assetsImagesBottomNavBarHomeIcon
+  /// assets/images/bottom_nav_bar/home_Icon.png
+  static const String assetsImagesBottomNavBarHomeIcon =
+      "assets/images/bottom_nav_bar/home_Icon.png";
 
-  /// Assets for assetsImagesBottomNavBarVector
-  /// assets/images/bottom_nav_bar/Vector.png
-  static const String assetsImagesBottomNavBarVector = "assets/images/bottom_nav_bar/Vector.png";
+  /// Assets for assetsImagesBottomNavBarHomeVector
+  /// assets/images/bottom_nav_bar/home_Vector.png
+  static const String assetsImagesBottomNavBarHomeVector =
+      "assets/images/bottom_nav_bar/home_Vector.png";
 
-  /// Assets for assetsImagesCategoriesGroup 2
-  /// assets/images/categories/Group 2.png
-  static const String assetsImagesCategoriesGroup2 = "assets/images/categories/Group 2.png";
+  /// Assets for assetsImagesBottomNavBarSavedIcon
+  /// assets/images/bottom_nav_bar/saved_Icon.png
+  static const String assetsImagesBottomNavBarSavedIcon =
+      "assets/images/bottom_nav_bar/saved_Icon.png";
 
-  /// Assets for assetsImagesCategoriesGroup 3
-  /// assets/images/categories/Group 3.png
-  static const String assetsImagesCategoriesGroup3 = "assets/images/categories/Group 3.png";
+  /// Assets for assetsImagesBottomNavBarSavedVector
+  /// assets/images/bottom_nav_bar/saved_Vector.png
+  static const String assetsImagesBottomNavBarSavedVector =
+      "assets/images/bottom_nav_bar/saved_Vector.png";
 
-  /// Assets for assetsImagesCategoriesGroup 4
-  /// assets/images/categories/Group 4.png
-  static const String assetsImagesCategoriesGroup4 = "assets/images/categories/Group 4.png";
+  /// Assets for assetsImagesBottomNavBarUserIcon
+  /// assets/images/bottom_nav_bar/user_Icon.png
+  static const String assetsImagesBottomNavBarUserIcon =
+      "assets/images/bottom_nav_bar/user_Icon.png";
 
-  /// Assets for assetsImagesCategoriesGroup 5
-  /// assets/images/categories/Group 5.png
-  static const String assetsImagesCategoriesGroup5 = "assets/images/categories/Group 5.png";
+  /// Assets for assetsImagesBottomNavBarUserVector
+  /// assets/images/bottom_nav_bar/user_Vector.png
+  static const String assetsImagesBottomNavBarUserVector =
+      "assets/images/bottom_nav_bar/user_Vector.png";
 
-  /// Assets for assetsImagesCategoriesGroup 6
-  /// assets/images/categories/Group 6.png
-  static const String assetsImagesCategoriesGroup6 = "assets/images/categories/Group 6.png";
+  /// Assets for assetsImagesCategoriesBeauty
+  /// assets/images/categories/beauty.png
+  static const String assetsImagesCategoriesBeauty =
+      "assets/images/categories/beauty.png";
 
-  /// Assets for assetsImagesLocationGroup 25
-  /// assets/images/location/Group 25.png
-  static const String assetsImagesLocationGroup25 = "assets/images/location/Group 25.png";
+  /// Assets for assetsImagesCategoriesFashion
+  /// assets/images/categories/fashion.png
+  static const String assetsImagesCategoriesFashion =
+      "assets/images/categories/fashion.png";
+
+  /// Assets for assetsImagesCategoriesFitness
+  /// assets/images/categories/fitness.png
+  static const String assetsImagesCategoriesFitness =
+      "assets/images/categories/fitness.png";
+
+  /// Assets for assetsImagesCategoriesGame
+  /// assets/images/categories/game.png
+  static const String assetsImagesCategoriesGame =
+      "assets/images/categories/game.png";
+
+  /// Assets for assetsImagesCategoriesLiving
+  /// assets/images/categories/living.png
+  static const String assetsImagesCategoriesLiving =
+      "assets/images/categories/living.png";
+
+  /// Assets for assetsImagesCategoriesStationery
+  /// assets/images/categories/stationery.png
+  static const String assetsImagesCategoriesStationery =
+      "assets/images/categories/stationery.png";
+
+  /// Assets for assetsImagesIconsAllert
+  /// assets/images/icons/allert.png
+  static const String assetsImagesIconsAllert =
+      "assets/images/icons/allert.png";
+
+  /// Assets for assetsImagesIconsEyeoff
+  /// assets/images/icons/eyeoff.png
+  static const String assetsImagesIconsEyeoff =
+      "assets/images/icons/eyeoff.png";
+
+  /// Assets for assetsImagesIconsSuccess
+  /// assets/images/icons/success.png
+  static const String assetsImagesIconsSuccess =
+      "assets/images/icons/success.png";
+
+  /// Assets for assetsImagesIconsSearch
+  /// assets/images/icons/search.png
+  static const String assetsImagesIconsSearch =
+      "assets/images/icons/search.png";
+
+  /// Assets for assetsImagesLocationLocation
+  /// assets/images/location/location.png
+  static const String assetsImagesLocationLocation =
+      "assets/images/location/location.png";
 
   /// Assets for assetsImagesLogoSplash
   /// assets/images/logo_splash.png
@@ -64,39 +123,31 @@ class Assets {
 
   /// Assets for assetsImagesProductsProduct1
   /// assets/images/products/product-1.png
-  static const String assetsImagesProductsProduct1 = "assets/images/products/product-1.png";
+  static const String assetsImagesProductsProduct1 =
+      "assets/images/products/product-1.png";
 
   /// Assets for assetsImagesProductsProduct2
   /// assets/images/products/product-2.png
-  static const String assetsImagesProductsProduct2 = "assets/images/products/product-2.png";
+  static const String assetsImagesProductsProduct2 =
+      "assets/images/products/product-2.png";
 
   /// Assets for assetsImagesProductsProduct3
   /// assets/images/products/product-3.png
-  static const String assetsImagesProductsProduct3 = "assets/images/products/product-3.png";
+  static const String assetsImagesProductsProduct3 =
+      "assets/images/products/product-3.png";
 
   /// Assets for assetsImagesProductsProduct4
   /// assets/images/products/product-4.png
-  static const String assetsImagesProductsProduct4 = "assets/images/products/product-4.png";
+  static const String assetsImagesProductsProduct4 =
+      "assets/images/products/product-4.png";
 
   /// Assets for assetsImagesProductsProduct5
   /// assets/images/products/product-5.png
-  static const String assetsImagesProductsProduct5 = "assets/images/products/product-5.png";
+  static const String assetsImagesProductsProduct5 =
+      "assets/images/products/product-5.png";
 
   /// Assets for assetsImagesProductsProsuct6
   /// assets/images/products/prosuct-6.png
-  static const String assetsImagesProductsProsuct6 = "assets/images/products/prosuct-6.png";
-
-    /// Assets for assetsImagesIconsAllert
-  /// assets/images/icons/allert.png
-  static const String assetsImagesIconsAllert = "assets/images/icons/allert.png";
-
-  /// Assets for assetsImagesIconsEye off
-  /// assets/images/icons/eye off.png
-  static const String assetsImagesIconsEyeoff = "assets/images/icons/eye off.png";
-
-  /// Assets for assetsImagesIconsSuccess
-  /// assets/images/icons/success.png
-  static const String assetsImagesIconsSuccess = "assets/images/icons/success.png";
-
+  static const String assetsImagesProductsProsuct6 =
+      "assets/images/products/prosuct-6.png";
 }
-

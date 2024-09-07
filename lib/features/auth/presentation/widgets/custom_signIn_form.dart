@@ -94,7 +94,8 @@ class CustomLoginForm extends StatelessWidget {
     );
   }
 
-  void handleSomeCasesInErrorStateForSignIn(BuildContext context, SignInErrorState state) {
+  void handleSomeCasesInErrorStateForSignIn(
+      BuildContext context, SignInErrorState state) {
     showModalBottomSheet(
       context: context,
       backgroundColor: Colors.transparent,
@@ -129,7 +130,7 @@ class CustomLoginForm extends StatelessWidget {
           message: 'Login Successful',
           buttonText: 'Go To Home',
           onButtonPressed: () {
-            customReplacementNavigate(context, '/home');
+            customReplacementNavigate(context, '/homeNavBar');
           },
         ),
       );
