@@ -4,7 +4,7 @@ import 'package:flutter/material.dart'; // Import this for TextStyle
 import 'package:ecommerce_app/core/utils/app_colors.dart'; // Ensure correct file contains the color definition
 
 abstract class AppTextStyle {
-  static final pacifico400style64 = const TextStyle(
+  static final lato30style = const TextStyle(
      fontFamily: 'Lato',
     fontSize: 30,
     color: AppColors.greyColor,

@@ -55,12 +55,23 @@ abstract class AppStrings {
   static const String fashion = "Fashion";
   static const String fitness = "Fitness";
   static const String living = "Living";
-  static const String games = " Games";
+  static const String games = "Games";
   static const String stationery = "Stationery";
+  static const String beauty = "Beauty";
   static const String hotDeals = "Hot Deals";
 
   // category screen
   static const String products = "Products";
+
+
+  // my Products
+  static const String productName1 = "Portable Neck Fan Hands Free Fan";
+  static const String productName2 = "Refurbished Echo Dot";
+  static const String productName3 = "Ring Stick Up Cam Battery HD";
+  static const String productName4 = "Women's Swing Tunic Notch Collar";
+  static const String productName5 = "Yoga Dress Pants for Women";
+  static const String productName6 = "adidas Women's Grand Court ";
+
 
   // cart screen
   static const String cartTotal = "Cart Total";
