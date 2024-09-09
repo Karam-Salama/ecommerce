@@ -1,13 +1,15 @@
-import '../../../../core/functions/navigation.dart';
-import '../auth_cubit/auth_cubit.dart';
-import '../auth_cubit/auth_state.dart';
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/functions/navigation.dart';
 import '../../../../core/functions/validation.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
 import '../../../../core/widgets/custom_btn.dart';
+import '../auth_cubit/auth_cubit.dart';
+import '../auth_cubit/auth_state.dart';
 import 'custom_error_bottom_sheet.dart';
 import 'custom_name_fields_row.dart';
 import 'custom_success_bottom_sheet.dart';

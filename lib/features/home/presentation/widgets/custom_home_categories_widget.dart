@@ -18,7 +18,7 @@ class HomeCategoriesListView extends StatelessWidget {
           return const SizedBox(width: 16);
         },
         itemBuilder: (_, index) {
-          return HomeCategoryItem(
+          return HomeCategoryListViewItem(
             imagePath: categories[index]['image']!,
             label: categories[index]['label']!,
           );

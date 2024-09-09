@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_text_styles.dart';
 
-class HomeCategoryItem extends StatelessWidget {
+class HomeCategoryListViewItem extends StatelessWidget {
   final String imagePath;
   final String label;
 
-  const HomeCategoryItem({
+  const HomeCategoryListViewItem({
     super.key,
     required this.imagePath,
     required this.label,
