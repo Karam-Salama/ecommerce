@@ -33,6 +33,9 @@ dependencies:
   cloud_firestore: ^5.4.0
   persistent_bottom_nav_bar: ^6.2.1
   flutter_svg: ^2.0.10+1
+  redacted: ^1.0.12
+  shimmer: ^3.0.0
+  cached_network_image: ^3.4.0
 
 
 # Dev dependencies specify other packages that your package needs in order to work.
@@ -65,4 +68,4 @@ flutter:
 flutter_assets:
   assets_path: assets/images/
   output_path: lib/core/utils/
-  filename: app_assets2.dart
+  filename: app_assets.dart

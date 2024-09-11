@@ -102,15 +102,15 @@ class Assets {
   static const String assetsImagesIconsEyeoff =
       "assets/images/icons/eyeoff.png";
 
-  /// Assets for assetsImagesIconsSuccess
-  /// assets/images/icons/success.png
-  static const String assetsImagesIconsSuccess =
-      "assets/images/icons/success.png";
-
   /// Assets for assetsImagesIconsSearch
   /// assets/images/icons/search.png
   static const String assetsImagesIconsSearch =
       "assets/images/icons/search.png";
+
+  /// Assets for assetsImagesIconsSuccess
+  /// assets/images/icons/success.png
+  static const String assetsImagesIconsSuccess =
+      "assets/images/icons/success.png";
 
   /// Assets for assetsImagesLocationLocation
   /// assets/images/location/location.png
@@ -120,6 +120,36 @@ class Assets {
   /// Assets for assetsImagesLogoSplash
   /// assets/images/logo_splash.png
   static const String assetsImagesLogoSplash = "assets/images/logo_splash.png";
+
+  /// Assets for assetsImagesProductFashionFashionProduct1
+  /// assets/images/product_fashion/fashion_product1.png
+  static const String assetsImagesProductFashion1 =
+      "assets/images/product_fashion/fashion_product1.png";
+
+  /// Assets for assetsImagesProductFashionFashionProduct2
+  /// assets/images/product_fashion/fashion_product2.png
+  static const String assetsImagesProductFashion2 =
+      "assets/images/product_fashion/fashion_product2.png";
+
+  /// Assets for assetsImagesProductFashionFashionProduct3
+  /// assets/images/product_fashion/fashion_product3.png
+  static const String assetsImagesProductFashion3 =
+      "assets/images/product_fashion/fashion_product3.png";
+
+  /// Assets for assetsImagesProductFashionFashionProduct4
+  /// assets/images/product_fashion/fashion_product4.png
+  static const String assetsImagesProductFashion4 =
+      "assets/images/product_fashion/fashion_product4.png";
+
+  /// Assets for assetsImagesProductFashionFashionProduct5
+  /// assets/images/product_fashion/fashion_product5.png
+  static const String assetsImagesProductFashion5 =
+      "assets/images/product_fashion/fashion_product5.png";
+
+  /// Assets for assetsImagesProductFashionFashionProduct6
+  /// assets/images/product_fashion/fashion_product6.png
+  static const String assetsImagesProductFashion6 =
+      "assets/images/product_fashion/fashion_product6.png";
 
   /// Assets for assetsImagesProductsProduct1
   /// assets/images/products/product-1.png

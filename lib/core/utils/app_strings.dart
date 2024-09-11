@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 abstract class AppStrings {
   // app name
   static const String appName = "STARSHOP";
@@ -63,7 +65,6 @@ abstract class AppStrings {
   // category screen
   static const String products = "Products";
 
-
   // my Products
   static const String productName1 = "Portable Neck Fan Hands Free Fan";
   static const String productName2 = "Refurbished Echo Dot";
@@ -71,7 +72,6 @@ abstract class AppStrings {
   static const String productName4 = "Women's Swing Tunic Notch Collar";
   static const String productName5 = "Yoga Dress Pants for Women";
   static const String productName6 = "adidas Women's Grand Court ";
-
 
   // cart screen
   static const String cartTotal = "Cart Total";
@@ -119,4 +119,20 @@ abstract class AppStrings {
   static const String saved = "Saved";
   static const String cart = "Cart";
   static const String account = "Account";
+}
+
+abstract class FirebaseCollectionName {
+  static const String users = "users";
+  static const String category_item = "category_item";
+  static const String name = "name";
+  static const String image = "image";
+  static const String products = "products";
+  static const String productImages = "productImages";
+  static const String productName = "productName";
+  static const String productOriginalPrice = "productOriginalPrice";
+  static const String productRating = "productRating";
+  static const String productReviewCount = "productReviewCount";
+  static const String productDescription = "productDescription";
+  static const String productSizes = "productSizes";
+  static const String productColors = "productColors";
 }
