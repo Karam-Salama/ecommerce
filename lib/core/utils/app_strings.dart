@@ -127,12 +127,12 @@ abstract class FirebaseCollectionName {
   static const String name = "name";
   static const String image = "image";
   static const String products = "products";
-  static const String productImages = "productImages";
+  static const String productImage = "productImage";
   static const String productName = "productName";
-  static const String productOriginalPrice = "productOriginalPrice";
+  static const String productPrice = "productPrice";
   static const String productRating = "productRating";
   static const String productReviewCount = "productReviewCount";
   static const String productDescription = "productDescription";
-  static const String productSizes = "productSizes";
-  static const String productColors = "productColors";
+  static const String productSize = "productSize";
+  static const String productColor = "productColor";
 }

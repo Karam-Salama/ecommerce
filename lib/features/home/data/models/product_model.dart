@@ -3,7 +3,7 @@ import '../../../../core/utils/app_strings.dart';
 class ProductModel {
   String productImage;
   String productName;
-  String productOriginalPrice;
+  String productPrice;
   String productRating;
   String productReviewCount;
   String productDescription;
@@ -13,7 +13,7 @@ class ProductModel {
   ProductModel({
     required this.productImage,
     required this.productName,
-    required this.productOriginalPrice,
+    required this.productPrice,
     required this.productRating,
     required this.productReviewCount,
     required this.productDescription,
@@ -23,14 +23,14 @@ class ProductModel {
 
   factory ProductModel.fromJson(jsonData) {
     return ProductModel(
-      productImage: jsonData[FirebaseCollectionName.productImages],
+      productImage: jsonData[FirebaseCollectionName.productImage],
       productName: jsonData[FirebaseCollectionName.productName],
-      productOriginalPrice:jsonData[FirebaseCollectionName.productOriginalPrice],
+      productPrice: jsonData[FirebaseCollectionName.productPrice],
       productRating: jsonData[FirebaseCollectionName.productRating],
       productReviewCount: jsonData[FirebaseCollectionName.productReviewCount],
       productDescription: jsonData[FirebaseCollectionName.productDescription],
-      productSize: jsonData[FirebaseCollectionName.productSizes],
-      productColor: jsonData[FirebaseCollectionName.productColors],
+      productSize: jsonData[FirebaseCollectionName.productSize],
+      productColor: jsonData[FirebaseCollectionName.productColor],
     );
   }
 }

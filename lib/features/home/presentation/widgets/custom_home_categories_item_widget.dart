@@ -40,6 +40,8 @@ class HomeCategoryListViewItem extends StatelessWidget {
           ),
           child: Image.network(
             model.image,
+            width: 24,
+            height: 24,
             fit: BoxFit.cover,
             errorBuilder: (context, error, stackTrace) {
               return const Icon(Icons.error);
