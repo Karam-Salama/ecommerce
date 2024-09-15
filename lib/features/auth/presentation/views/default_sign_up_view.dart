@@ -18,7 +18,7 @@ class DefaultSignUpView extends StatelessWidget {
         child: CustomScrollView(
           physics: const BouncingScrollPhysics(),
           slivers: [
-            const SliverToBoxAdapter(child: SizedBox(height: 24)),
+            const SliverToBoxAdapter(child: SizedBox(height: 60)),
             const SliverToBoxAdapter(
               child: CustomHeaderWidget(
                   text: AppStrings.signUpWithEmail,

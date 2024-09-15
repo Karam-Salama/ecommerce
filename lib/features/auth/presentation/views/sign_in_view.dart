@@ -44,7 +44,7 @@ class LoginView extends StatelessWidget {
                 textPart1: AppStrings.dontHaveAccount,
                 textPart2: AppStrings.signup,
                 onPress: () {
-                  customReplacementNavigate(context, '/signUp');
+                  customReplacementNavigate(context, '/signUpDefault');
                 },
               ),
               const SizedBox(height: 64),

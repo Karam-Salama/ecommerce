@@ -32,3 +32,5 @@ final class ResetPasswordErrorState extends AuthState {
   final String errorMessage;
   ResetPasswordErrorState({required this.errorMessage});
 }
+
+  

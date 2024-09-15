@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import '../../../../core/functions/navigation.dart';
 import '../auth_cubit/auth_cubit.dart';
 import '../auth_cubit/auth_state.dart';

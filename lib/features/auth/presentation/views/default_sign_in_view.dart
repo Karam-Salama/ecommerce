@@ -18,7 +18,7 @@ class DefaultSignInView extends StatelessWidget {
         child: CustomScrollView(
           physics: const BouncingScrollPhysics(),
           slivers: [
-            const SliverToBoxAdapter(child: SizedBox(height: 24)),
+            const SliverToBoxAdapter(child: SizedBox(height: 60)),
             const SliverToBoxAdapter(
               child: CustomHeaderWidget(
                 text: AppStrings.loginWithEmail,
@@ -38,7 +38,7 @@ class DefaultSignInView extends StatelessWidget {
                 textPart1: AppStrings.dontHaveAccount,
                 textPart2: AppStrings.signup,
                 onPress: () {
-                  customReplacementNavigate(context, '/signUp');
+                  customReplacementNavigate(context, '/signUpDefault');
                 },
               ),
             ),

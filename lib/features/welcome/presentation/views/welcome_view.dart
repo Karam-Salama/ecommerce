@@ -21,7 +21,7 @@ class WelcomeView extends StatelessWidget {
               shrinkWrap: true,
               children: [
                 const CustomWelcomeBody(),
-                const SizedBox(height: 234),
+                const SizedBox(height: 200),
                 CustomButton(
                     text: AppStrings.getStarted,
                     onPressed: () {
@@ -29,7 +29,7 @@ class WelcomeView extends StatelessWidget {
                           .saveData(key: "welcomeVisited", value: true);
                       customReplacementNavigate(context, "/signup");
                     }),
-                const SizedBox(height: 41),
+                const SizedBox(height: 50),
               ],
             ),
           ),

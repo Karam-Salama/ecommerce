@@ -6,7 +6,6 @@ import '../../features/auth/presentation/views/default_sign_in_view.dart';
 import '../../features/auth/presentation/views/default_sign_up_view.dart';
 import '../../features/auth/presentation/views/forget_password_view.dart';
 import '../../features/auth/presentation/views/sign_in_view.dart';
-import '../../features/auth/presentation/views/sign_up_view.dart';
 import '../../features/home/presentation/views/home_view.dart';
 import '../../features/home/presentation/widgets/custom_home_nav_bar_widget.dart';
 import '../../features/splash/presentation/views/splash_view.dart';
@@ -20,13 +19,6 @@ final GoRouter router = GoRouter(routes: [
   GoRoute(
     path: "/welcome",
     builder: (context, state) => const WelcomeView(),
-  ),
-  GoRoute(
-    path: "/signup",
-    builder: (context, state) => BlocProvider(
-      create: (context) => AuthCubit(),
-      child: const SignUpView(),
-    ),
   ),
   GoRoute(
     path: "/signUpDefault",
@@ -49,8 +41,6 @@ final GoRouter router = GoRouter(routes: [
       child: const DefaultSignInView(),
     ),
   ),
-      
-
   GoRoute(
     path: "/home",
     builder: (context, state) => const HomeView(),

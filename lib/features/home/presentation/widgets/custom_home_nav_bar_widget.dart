@@ -21,9 +21,10 @@ class HomeNavBarWidget extends StatelessWidget {
       screens: _buildScreens(),
       items: _navBarsItems(),
       backgroundColor: AppColors.backgroundColor,
+      padding: const EdgeInsets.symmetric(vertical: 15),
       navBarStyle: NavBarStyle.style2,
       confineToSafeArea: true,
-      navBarHeight: kBottomNavigationBarHeight,
+      navBarHeight: 80,
     );
   }
 }

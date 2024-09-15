@@ -15,9 +15,9 @@ class ForgetPassword extends StatelessWidget {
         child: CustomScrollView(
           physics: BouncingScrollPhysics(),
           slivers: [
-            SliverToBoxAdapter(child: SizedBox(height: 24)),
+            SliverToBoxAdapter(child: SizedBox(height: 60)),
             SliverToBoxAdapter(child: ForgetPasswordTitle()),
-            SliverToBoxAdapter(child: SizedBox(height: 29)),
+            SliverToBoxAdapter(child: SizedBox(height: 16)),
             SliverToBoxAdapter(child: ForgetPasswordSubtitleWidget()),
             SliverToBoxAdapter(child: SizedBox(height: 52)),
             SliverToBoxAdapter(child: ForgetPasswordForm()),
