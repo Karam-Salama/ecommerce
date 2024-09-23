@@ -57,7 +57,12 @@ abstract class AppStrings {
   static const String living = "Living";
   static const String games = " Games";
   static const String stationery = "Stationery";
+  static const String beauty = "Beauty";
   static const String hotDeals = "Hot Deals";
+  static const String electronics = "electronics";
+  static const String jewelery = "jewelery";
+  static const String mensClothing = "men's clothing";
+  static const String womensClothing = "women's clothing";
 
   // category screen
   static const String products = "Products";
