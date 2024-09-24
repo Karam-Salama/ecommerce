@@ -13,7 +13,7 @@ void main() async {
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   setUpServiceLocator();
   await getIt<CacheHelper>().init();
-  checkStateChanges();
+  checkStateChanges(); 
   runApp(const EcommerceApp());
 }
 

@@ -47,7 +47,7 @@ final GoRouter router = GoRouter(routes: [
   ),
   GoRoute(
     path: "/homeNavBar",
-    builder: (context, state) =>  HomeNavBarWidget(),
+    builder: (context, state) => HomeNavBarWidget(),
   ),
   GoRoute(
     path: "/forgotPassword",

@@ -2,15 +2,20 @@ import 'package:flutter/material.dart';
 import '../../../../core/widgets/custom_btn.dart';
 
 class SuccessBottomSheet extends StatelessWidget {
-  final String message;
-  final String buttonText;
+  final String title;
+  final String? subtitle;
+  final String buttonText1;
   final VoidCallback? onButtonPressed;
-
+  final String? buttonText2;
+  final VoidCallback? onButtonPressed2;
   const SuccessBottomSheet({
     super.key,
-    required this.message,
-    this.buttonText = 'Done',
+    required this.title,
+    this.buttonText1 = 'Done',
     this.onButtonPressed,
+    this.subtitle,
+    this.buttonText2,
+    this.onButtonPressed2,
   });
 
   @override
@@ -19,7 +24,8 @@ class SuccessBottomSheet extends StatelessWidget {
       width: double.infinity, // Full width of the screen
       padding: const EdgeInsets.all(20.0),
       decoration: const BoxDecoration(
-        color: Color(0xFF2C2C36), // Use the color from AppColors or adjust as needed
+        color: Color(
+            0xFF2C2C36), // Use the color from AppColors or adjust as needed
         borderRadius: BorderRadius.vertical(
           top: Radius.circular(16),
         ),
@@ -34,7 +40,7 @@ class SuccessBottomSheet extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           Text(
-            message,
+            title,
             style: const TextStyle(
               color: Colors.white,
               fontSize: 18,
@@ -42,12 +48,40 @@ class SuccessBottomSheet extends StatelessWidget {
             ),
             textAlign: TextAlign.center,
           ),
+          const SizedBox(height: 16),
+          Text(
+            subtitle ?? '',
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 16,
+            ),
+            textAlign: TextAlign.center,
+          ),
           const SizedBox(height: 24),
-          CustomButton(
-            text: buttonText,
-            onPressed: onButtonPressed ?? () {
-              Navigator.of(context).pop(); // Default action
-            },
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: CustomButton(
+                  text: buttonText1,
+                  onPressed: onButtonPressed ??
+                      () {
+                        Navigator.of(context).pop(); // Default action
+                      },
+                ),
+              ),
+              const SizedBox(width: 16),
+              if (buttonText2 != null)
+                Expanded(
+                  child: CustomButton(
+                    text: buttonText2,
+                    onPressed: onButtonPressed2 ??
+                        () {
+                          Navigator.of(context).pop(); // Default action
+                        },
+                  ),
+                ),
+            ],
           ),
         ],
       ),

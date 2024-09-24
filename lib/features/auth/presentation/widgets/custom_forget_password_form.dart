@@ -64,7 +64,8 @@ class ForgetPasswordForm extends StatelessWidget {
     );
   }
 
-  void handleSomeCasesInErrorStateForForgetPassword(BuildContext context, ResetPasswordErrorState state) {
+  void handleSomeCasesInErrorStateForForgetPassword(
+      BuildContext context, ResetPasswordErrorState state) {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
@@ -86,8 +87,8 @@ class ForgetPasswordForm extends StatelessWidget {
       isScrollControlled: true,
       builder: (BuildContext context) {
         return SuccessBottomSheet(
-          message: 'Check your email and Reset Password',
-          buttonText: 'Done',
+          title: 'Check your email and Reset Password',
+          buttonText1: 'Done',
           onButtonPressed: () {
             customReplacementNavigate(
                 context, '/loginDefault'); // Close the bottom sheet

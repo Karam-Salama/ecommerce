@@ -129,7 +129,8 @@ class CustomSignUpForm extends StatelessWidget {
     );
   }
 
-  void handleSomeCasesInErrorStateForSignUp(BuildContext context, SignUpErrorState state) {
+  void handleSomeCasesInErrorStateForSignUp(
+      BuildContext context, SignUpErrorState state) {
     showModalBottomSheet(
       context: context,
       backgroundColor: Colors.transparent,
@@ -160,8 +161,8 @@ class CustomSignUpForm extends StatelessWidget {
       ),
       isScrollControlled: true,
       builder: (context) => SuccessBottomSheet(
-        message: 'Successfully, check your email and activate your account',
-        buttonText: 'Let\'s Go To Verification',
+        title: 'Successfully, check your email and activate your account',
+        buttonText1: 'Let\'s Go To Verification',
         onButtonPressed: () {
           customReplacementNavigate(context, '/loginDefault');
         },

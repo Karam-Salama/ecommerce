@@ -97,8 +97,8 @@ class CustomSocialBtns extends StatelessWidget {
         ),
         isScrollControlled: true,
         builder: (context) => SuccessBottomSheet(
-          message: 'Login Successful',
-          buttonText: 'Go To Home',
+          title: 'Login Successful',
+          buttonText1: 'Go To Home',
           onButtonPressed: () {
             customReplacementNavigate(context, '/homeNavBar');
           },
@@ -115,8 +115,8 @@ class CustomSocialBtns extends StatelessWidget {
         ),
         isScrollControlled: true,
         builder: (context) => SuccessBottomSheet(
-          message: 'Please Verify Your Email Address',
-          buttonText: 'Let\'s Go To Verification',
+          title: 'Please Verify Your Email Address',
+          buttonText1: 'Let\'s Go To Verification',
           onButtonPressed: () {
             Navigator.of(context).pop();
           },
