@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
 import '../../../../core/utils/app_assets.dart';
@@ -7,7 +6,6 @@ import '../../../../core/utils/app_colors.dart';
 import '../../../cart/presentation/views/cart_view.dart';
 import '../../../profile/presentation/views/profile_view.dart';
 import '../../../saved/presentation/views/saved_view.dart';
-import '../cubit/home_cubit.dart';
 import '../views/home_view.dart';
 
 class HomeNavBarWidget extends StatelessWidget {
@@ -17,9 +15,8 @@ class HomeNavBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
     return PersistentTabView(
-      controller: controller,
+      controller: _controller,
       context,
       screens: _buildScreens(),
       items: _navBarsItems(),
@@ -28,20 +25,6 @@ class HomeNavBarWidget extends StatelessWidget {
       navBarStyle: NavBarStyle.style2,
       confineToSafeArea: true,
       navBarHeight: 80,
-=======
-    return BlocProvider(
-      create: (context) => HomeCubit()..getCategoryItems(),
-      child: PersistentTabView(
-        controller: _controller,
-        context,
-        screens: _buildScreens(),
-        items: _navBarsItems(),
-        backgroundColor: AppColors.backgroundColor,
-        navBarStyle: NavBarStyle.style2,
-        confineToSafeArea: true,
-        navBarHeight: kBottomNavigationBarHeight,
-      ),
->>>>>>> a8859969992b14d6b53252b6fdc054f5b1730918
     );
   }
 
