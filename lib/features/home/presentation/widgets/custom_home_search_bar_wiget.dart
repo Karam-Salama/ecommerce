@@ -8,6 +8,7 @@ class CustomSearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18.0),
       child: Container(
@@ -28,17 +29,36 @@ class CustomSearchBar extends StatelessWidget {
                   border: InputBorder.none,
                 ),
                 style: TextStyle(color: AppColors.greyColor),
+=======
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      decoration: BoxDecoration(
+        color: Colors.grey[900],
+        borderRadius: BorderRadius.circular(25),
+      ),
+      child: const Row(
+        children: <Widget>[
+          Icon(Icons.search, color: AppColors.greyColor),
+          SizedBox(width: 10),
+          Expanded(
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: 'Find your favorite items',
+                hintStyle: TextStyle(color: AppColors.greyColor),
+                border: InputBorder.none,
+>>>>>>> 53d9717011fd780816d39af8d52b5c2f13ce1e71
               ),
+              style: TextStyle(color: AppColors.greyColor),
             ),
-            Image(
-              image: AssetImage(
-                Assets.assetsImagesIconsSearch,
-              ),
-              width: 19,
-              height: 19,
-            )
-          ],
-        ),
+          ),
+          Image(
+            image: AssetImage(
+              Assets.assetsImagesIconsSearch,
+            ),
+            width: 19,
+            height: 19,
+          )
+        ],
       ),
     );
   }
