@@ -114,3 +114,8 @@ abstract class AppStrings {
   static const String cart = "Cart";
   static const String account = "Account";
 }
+
+
+class FirebaseCollectionName{
+  static const String users = "users";
+}

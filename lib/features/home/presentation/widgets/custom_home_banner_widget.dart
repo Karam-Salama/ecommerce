@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/app_assets.dart';
@@ -11,7 +10,7 @@ class HomeBannerWidget extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: 150,
-      padding: const EdgeInsets.symmetric(horizontal: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 18),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20.0), // Maintain the radius here
       ),

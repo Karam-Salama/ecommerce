@@ -33,7 +33,7 @@ class HomeView extends StatelessWidget {
                   text1: AppStrings.hotDeals, text2: AppStrings.viewAll)),
           const SliverToBoxAdapter(child: SizedBox(height: 8)),
           const ProductsGridViewBuilder(),
-          const SliverToBoxAdapter(child: SizedBox(height: 16)),
+          const SliverToBoxAdapter(child: SizedBox(height: 24)),
         ],
       ),
     );
